@@ -1,0 +1,4 @@
+# Example git checkout from Ansible Playbooks
+- git:
+    repo: https://github.com/haxxorsid/stock-management-system.git
+    dest: /srv/checkout
