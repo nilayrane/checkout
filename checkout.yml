@@ -3,6 +3,5 @@
   hosts: all
   tasks:
   - name: Hello World!
-    git:
-      repo: https://github.com/haxxorsid/stock-management-system.git
-      dest: /srv/checkout
+    debug:
+      msg: "Hello World!"
