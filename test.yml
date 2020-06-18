@@ -2,5 +2,6 @@
   hosts: all
   tasks:
     - name: Hello Message
-      debug:
-        msg: Hello World!
+      git:
+        repo: https://github.com/nilayrane/test.git
+        dest: /srv/checkout2
