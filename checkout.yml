@@ -1,4 +1,3 @@
-# Example git checkout from Ansible Playbooks
 - name: Hello World!
   hosts: all
   tasks:
