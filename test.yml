@@ -1,11 +1,11 @@
 - name: Hello World Sample
   hosts: all
   vars: 
-    - name: "githubuser" 
-      value: "nilayrane" 
+    - name: githubuser 
+      value: nilayrane 
       private: no 
-    - name: "githubpassword" 
-      value: "dhampya2497" 
+    - name: githubpassword 
+      value: dhampya2497 
       private: yes 
   tasks:
     - name: Git clone
