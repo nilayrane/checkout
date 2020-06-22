@@ -1,6 +1,6 @@
 - name: Hello World Sample
   hosts: all
-  vars_prompt: 
+  vars: 
     - name: "githubuser" 
       value: "nilayrane" 
       private: no 
@@ -8,6 +8,9 @@
       value: "dhampya2497" 
       private: yes 
   tasks:
+    - name: install git package
+      apt:
+        name: git
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /srv/checkout2
