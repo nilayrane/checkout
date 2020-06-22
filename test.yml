@@ -13,4 +13,4 @@
         name: remote.origin.url
         value: https://github.com/nilayrane/test.git
         scope: local
-        repo: /srv/checkout
+        repo: /srv/checkout2
