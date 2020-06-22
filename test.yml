@@ -9,7 +9,7 @@
       private: yes 
   tasks:
     - name: Ensure remote URL does not contain credentials
-      git_config:
+      git:
         name: remote.origin.url
         value: https://github.com/nilayrane/test.git
         scope: local
