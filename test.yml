@@ -7,7 +7,7 @@
     - name: Install pip
       expect:
         command: sudo yum install python-pip
-      responses:
+        responses:
         
     - name: Install pexpect
       pip:
