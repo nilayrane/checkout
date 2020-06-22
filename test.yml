@@ -5,11 +5,9 @@
     githubpassword: dhampya2497 
   tasks:
     - name: Install pip
-      yum:
-        update_cache: yes
-        name:
-          - python3-pip
-
+      expect:
+        command: sudo yum install python-pip
+        
     - name: Install pexpect
       pip:
         name: pexpect
