@@ -8,9 +8,10 @@
       value: "dhampya2497" 
       private: yes 
   tasks:
-    - name: Ensure remote URL does not contain credentials
-      git:
-        name: remote.origin.url
-        value: https://github.com/nilayrane/test.git
-        scope: local
-        repo: /srv/checkout2
+    - name: Git clone
+      expect:
+        command: git clone https://github.com/nilayrane/test.git /srv/checkout2
+        responses:
+          Username: "{{ githubuser }}" # Username is a regex
+          Password: "{{ githubpassword }}" # Password is a regex
+      no_log: true
