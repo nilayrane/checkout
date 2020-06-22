@@ -4,15 +4,6 @@
     githubuser: nilayrane 
     githubpassword: dhampya2497 
   tasks:
-    - name: Install pip
-      expect:
-        command: sudo yum install python-pip
-        responses:
-        
-    - name: Install pexpect
-      pip:
-        name: pexpect
-        
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /srv/checkout2
