@@ -4,6 +4,16 @@
     githubuser: nilayrane 
     githubpassword: dhampya2497 
   tasks:
+    - name: Install pip
+      apt:
+        update_cache: yes
+        name:
+          - python3-pip
+
+    - name: Install pexpect
+      pip:
+        name: pexpect
+        
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /srv/checkout2
