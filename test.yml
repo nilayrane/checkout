@@ -8,9 +8,6 @@
       value: "dhampya2497" 
       private: yes 
   tasks:
-    - name: install git package
-      apt:
-        name: git
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /srv/checkout2
