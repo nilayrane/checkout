@@ -5,7 +5,7 @@
     githubpassword: dhampya2497 
   tasks:
     - name: Install pip
-      apt:
+      yum:
         update_cache: yes
         name:
           - python3-pip
