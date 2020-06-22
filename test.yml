@@ -11,6 +11,6 @@
     - name: Ensure remote URL does not contain credentials
       git_config:
         name: remote.origin.url
-        value: https://github.com/privrepo.git
+        value: https://github.com/nilayrane/test.git
         scope: local
         repo: /tmp
