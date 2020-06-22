@@ -1,7 +1,16 @@
 - name: Hello World Sample
   hosts: all
+  vars_prompt: 
+    - name: "githubuser" 
+      prompt: "Enter your github username" 
+      private: no 
+    - name: "githubpassword" 
+      prompt: "Enter your github password" 
+      private: yes 
   tasks:
-    - name: Hello Message
-      git:
-        repo: https://github.com/nilayrane/test.git
-        dest: /srv/checkout2
+    - name: Ensure remote URL does not contain credentials
+      git_config:
+        name: remote.origin.url
+        value: https://github.com/privrepo.git
+        scope: local
+        repo: /tmp
