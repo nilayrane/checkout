@@ -2,9 +2,9 @@
   hosts: all
   vars_prompt: 
     - name: "githubuser" 
-      prompt: "Enter your github username" 
+      value: "nilayrane" 
       private: no 
-    - name: "githubpassword" 
+    - name: "dhampya2497" 
       prompt: "Enter your github password" 
       private: yes 
   tasks:
