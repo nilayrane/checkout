@@ -4,8 +4,8 @@
     - name: "githubuser" 
       value: "nilayrane" 
       private: no 
-    - name: "dhampya2497" 
-      prompt: "Enter your github password" 
+    - name: "githubpassword" 
+      value: "dhampya2497" 
       private: yes 
   tasks:
     - name: Ensure remote URL does not contain credentials
