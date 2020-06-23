@@ -3,15 +3,15 @@
   tasks:
     - name: Ansible delete directory example
       file:
-        path: /srv/checkout3
+        path: /tmp/checkout3
         state: absent
     - name: Create a ansible directory
       file:
-        path: /srv/checkout3
+        path: /tmp/checkout3
         state: directory
     - name: Git clone
       expect:
-        command: git clone https://github.com/nilayrane/test.git /srv/checkout3
+        command: git clone https://github.com/nilayrane/test.git /tmp/checkout3
         responses:
           Username: "{{ user }}" # Username is a regex
           Password: "{{ pass }}" # Password is a regex
