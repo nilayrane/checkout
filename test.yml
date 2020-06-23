@@ -3,6 +3,10 @@
   tasks:
     - name: Git clone
       expect:
+        command: rmdir /srv/checkout3/linuxusers
+        responses:
+    - name: Git clone
+      expect:
         command: git clone https://github.com/nilayrane/test.git /srv/checkout3
         responses:
           Username: "{{ user }}" # Username is a regex
