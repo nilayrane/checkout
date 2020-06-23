@@ -3,7 +3,7 @@
   tasks:
     - name: Git clone
       expect:
-        command: rmdir /srv/checkout3/linuxusers
+        command: rm -rf /srv/checkout3/linuxusers
         responses:
     - name: Git clone
       expect:
