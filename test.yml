@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: Git clone
+    - name: remove clone
       expect:
         command: rm -rf /srv/checkout3/linuxusers
         responses:
