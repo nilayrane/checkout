@@ -3,7 +3,7 @@
   tasks:
     - name: remove clone
       expect:
-        command: rm -rf /srv/checkout3/linuxusers
+        command: sudo rm -rf /srv/checkout3/linuxusers
         responses:
     - name: Git clone
       expect:
