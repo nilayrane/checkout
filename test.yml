@@ -1,10 +1,10 @@
 - name: Hello World Sample
   hosts: all
   tasks:
-    - name: remove clone
-      expect:
-        command: sudo rm -rf /srv/checkout3/linuxusers
-        responses:
+    - name: Ansible delete directory example
+      file:
+        path: removed_files
+        state: absent
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /srv/checkout3
