@@ -3,7 +3,7 @@
   tasks:
     - name: Ansible delete directory example
       file:
-        path: removed_files
+        path: /srv/checkout3/linuxusers
         state: absent
     - name: Git clone
       expect:
