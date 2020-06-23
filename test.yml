@@ -1,8 +1,5 @@
 - name: Hello World Sample
   hosts: all
-  vars: 
-    githubuser: nilayrane 
-    githubpassword: dhampya2497 
   tasks:
     - name: Git clone
       expect:
