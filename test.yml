@@ -23,7 +23,7 @@
       register: data
     - name: Get access token
       uri: 
-        url: http://125.99.38.202:8197/arconToken
+        url: http://125.99.38.202:8197/api/Ansible/SetAnsibleCredentials
         method: POST
         status_code: 200
         return_content: yes
