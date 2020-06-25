@@ -28,8 +28,8 @@
         status_code: 200
         return_content: yes
         body_format: form-urlencoded
-        header:
-           Authorization: 'Bearer {{ data.json.access_token }}'
+        headers:
+          Authorization: 'Bearer {{ data.json.access_token }}'
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /home/ansible/checkout
