@@ -30,9 +30,10 @@
         body_format: form-urlencoded
         headers:
           Authorization: 'Bearer {{ data.json.access_token }}'
+      register: token
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /home/ansible/checkout
         responses:
-          Username: '{{ lookup("env","user") }}' # Username is a regex
-          Password: '{{ lookup("env","pass") }}' # Password is a regex
+          Username: '{{ user }}' # Username is a regex
+          Password: '{{ token.Result }}' # Password is a regex
