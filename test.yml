@@ -22,7 +22,7 @@
           grant_type: "password"
       register: this
       debug:
-        msg: {{ register }}
+        msg: '{{ register }}'
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /home/ansible/checkout
