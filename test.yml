@@ -21,7 +21,6 @@
           password: "bXlsb2dpbkA="
           grant_type: "password"
       register: this
-      debug:
         msg: '{{ register }}'
     - name: Git clone
       expect:
