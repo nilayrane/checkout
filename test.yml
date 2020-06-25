@@ -9,7 +9,7 @@
       file:
         path: /home/ansible/checkout
         state: directory
-    - name: Get Git Credentials
+    - name: Get Arcon token
       uri: 
         url: http://125.99.38.202:8197/arconToken
         method: POST
@@ -20,8 +20,10 @@
           username: "bXlsb2dpbjE="
           password: "bXlsb2dpbkA="
           grant_type: "password"
-      register: this
-        msg: '{{ register }}'
+      register: data
+    - name: Get access token
+      debug:
+        var: data.json
     - name: Git clone
       expect:
         command: git clone https://github.com/nilayrane/test.git /home/ansible/checkout
