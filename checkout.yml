@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: all
+  vars:
+  motd_value: "{{ lookup('10.10.0.171@deven.vagal') }}"
   tasks:
-    - name: Hello Message
-      git:
-        repo: https://github.com/haxxorsid/stock-management-system.git
-        dest: /srv/checkout
+    - debug:
+        msg: "motd value is {{ motd_value }}"
