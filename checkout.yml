@@ -1,7 +1,7 @@
 - name: Hello World Sample
   hosts: all
   vars:
-    motd_value: "{{ lookup('arconplugin','10.10.0.171@deven.vagal') }}"
+    motd_value: "{{ lookup('arconplugin','10.10.0.171@deven.vagal',wantlist=False) }}"
   tasks:
     - debug:
         msg: "motd value is {{ motd_value }}"
