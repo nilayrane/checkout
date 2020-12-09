@@ -1,7 +1,7 @@
-- name: Hello World Sample
+- name: Arcon Ansible Demo
   hosts: all
   vars:
     pwd: "{{ lookup('arconplugin','35.154.66.39@testuser',wantlist=True) }}"
   tasks:
-    - debug:
-        msg: "Password is {{ pwd }}"
+    - name: Connecting to Remote machine using SSH
+      command: ssh testuser@35.154.66.39
