@@ -4,4 +4,4 @@
     pwd: "{{ lookup('arconplugin','35.154.66.39@testuser',wantlist=True) }}"
   tasks:
     - debug: 
-        msg: Password is {pwd}
+        msg: Password is {{pwd}}
