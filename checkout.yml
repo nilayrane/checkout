@@ -3,5 +3,5 @@
   vars:
     pwd: "{{ lookup('arconplugin','35.154.66.39@testuser',wantlist=True) }}"
   tasks:
-    - name: Connecting to Remote machine using SSH
-      command: ssh testuser@35.154.66.39
+    - debug: 
+        msg: Password is {pwd}
