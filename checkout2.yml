@@ -1,1 +1,40 @@
-
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Ansible delete directory example
+      file:
+        path: /home/ansible/checkout
+        state: absent
+    - name: Create a ansible directory
+      file:
+        path: /home/ansible/checkout
+        state: directory
+    - name: Get Arcon token
+      uri: 
+        url: http://125.99.38.202:8197/arconToken
+        method: POST
+        status_code: 200
+        return_content: yes
+        body_format: form-urlencoded
+        body: 
+          username: "bXlsb2dpbjE="
+          password: "bXlsb2dpbkA="
+          grant_type: "password"
+      register: data
+    - name: Get access token
+      uri: 
+        url: http://125.99.38.202:8197/api/Ansible/SetAnsibleCredentials
+        method: POST
+        status_code: 200
+        return_content: yes
+        body_format: form-urlencoded
+        headers:
+          Authorization: 'Bearer {{ data.json.access_token }}'
+      register: token
+    - name: Git clone
+      expect:
+        command: git clone https://github.com/nilayrane/test.git /home/ansible/checkout
+        responses:
+          Username: '{{ user }}' # Username is a regex
+          Password: '{{ token.json.Result }}' # Password is a regex
+          
