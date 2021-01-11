@@ -1,7 +1,7 @@
 - name: Arcon Ansible Demo
   hosts: all
   vars:
-    pwd: {{ lookup('env', 'USER') }}
+    pwd: "{{ lookup('env', 'USER') }}"
   tasks:
     - debug: msg="Password is {{ pwd }}"
 
